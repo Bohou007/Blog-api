@@ -1,0 +1,4 @@
+apps:
+  - name: App-Blog
+    random-route: true
+    memory: 64M
