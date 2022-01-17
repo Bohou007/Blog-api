@@ -2,4 +2,4 @@ applications:
   - name: app-blog
     random-route: true
     buildpacks: https://github.com/cloudfoundry/nodejs-buildpack
-    memory: 64M
+    memory: 128M
