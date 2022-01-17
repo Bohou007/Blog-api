@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/*
 *.DS_Store
 README.md
@@ -7,3 +8,6 @@ README.md
 logs
 *.log
 .vscode
+=======
+node_modules
+>>>>>>> e8f2bc6c0391d98158e7a13bbfc4edfb381fa077
