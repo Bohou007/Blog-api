@@ -1,7 +1,8 @@
 applications:
   - path: .
     name: app-blog
-    buildpacks: https://github.com/cloudfoundry/nodejs-buildpack
+    random-route: true
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
     environment_json: {}
     memory: 64M
     instances: 1
