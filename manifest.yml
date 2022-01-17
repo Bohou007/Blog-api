@@ -1,4 +1,4 @@
 apps:
-  - name: GetStartedNode
+  - name: app-blog-20220106145344903
     random-route: true
     memory: 128M
