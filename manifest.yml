@@ -1,4 +1,8 @@
-apps:
-  - name: app-blog-20220106145344903
-    random-route: true
-    memory: 128M
+applications:
+  - path: .
+    name: app-blog
+    environment_json: {}
+    memory: 64M
+    instances: 1
+    disk_quota: 1024M
+    services: []
