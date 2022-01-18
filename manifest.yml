@@ -1,5 +1,6 @@
+---
 applications:
-  - name: "App-blog-dev"
+  - name: App-blog-dev
     random-route: true
-    buildpacks: "https://github.com/cloudfoundry/nodejs-buildpack"
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
     memory: 128M
