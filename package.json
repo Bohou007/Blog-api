@@ -4,8 +4,8 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start": "pm2 start server.js --name Blog Api",
-        "starts": "node server.js",
+        "starts": "pm2 start server.js --name Blog-Api",
+        "start": "node server.js",
         "stop": "pm2 stop server.js --name Blog Api"
     },
     "keywords": [],
