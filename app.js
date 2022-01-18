@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 // routes imports
+const TestRoutes = require("./routes/TestRoutes");
 const AuthRoutes = require("./routes/AuthRoutes");
 const UserRoutes = require("./routes/UserRoutes");
 const PostsRoutes = require("./routes/PostsRoutes");
@@ -22,6 +23,7 @@ const parseForm = bodyParser.urlencoded({ extended: false });
 app.use(parseForm);
 
 // utilisations des routes
+app.use("/", TestRoutes);
 app.use("/api/auth", AuthRoutes);
 app.use("/api/users", UserRoutes);
 app.use("/api/posts", PostsRoutes);
