@@ -1,7 +1,7 @@
 "use strict";
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Posts", {
+  async up(queryInterface, Sequelize) {
+    await queryInterface.createTable("Comments", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,32 +10,9 @@ module.exports = {
       },
       uuid: {
         type: Sequelize.STRING,
-        unique: true,
-      },
-      slug: {
-        type: Sequelize.STRING,
-        unique: true,
-      },
-      title: {
-        type: Sequelize.STRING,
       },
       content: {
         type: Sequelize.TEXT,
-      },
-      image: {
-        type: Sequelize.STRING,
-      },
-      view: {
-        type: Sequelize.BIGINT,
-      },
-      likes: {
-        type: Sequelize.BIGINT,
-      },
-      is_enable: {
-        type: Sequelize.BOOLEAN,
-      },
-      is_publish: {
-        type: Sequelize.BOOLEAN,
       },
       user_id: {
         type: Sequelize.INTEGER,
@@ -46,7 +23,22 @@ module.exports = {
           key: "id",
         },
         onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+      },
+      post_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Posts",
+          },
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+      },
+      parent_id: {
+        type: Sequelize.INTEGER,
+      },
+      is_enable: {
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
@@ -58,7 +50,7 @@ module.exports = {
       },
     });
   },
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("Posts");
+  async down(queryInterface, Sequelize) {
+    await queryInterface.dropTable("Comments");
   },
 };
